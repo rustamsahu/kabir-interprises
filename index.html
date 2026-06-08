@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabir Enterprises</title>
+<style>
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+#cont{
+    height: 100vh;
+    background-color:  #cdfffe;
+}
+h1{
+    height: 200px;
+    padding-top: 100px;
+    font-style: italic;
+    margin-bottom: 0%;
+     text-align: center;
+     font-size: clamp(20px,20vw,80px);
+     font-weight: 800;
+     background:radial-gradient(circle,rgb(78, 35, 185),black);
+    -webkit-background-clip:text;
+    color: transparent;
+}
+#cont1{
+    height: clamp(100px,30vw,200px);
+    width: clamp(200px,60vw,400px);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+.option{
+    background-color: #ffc583;
+    width: 47%;
+    height: 94%;
+    border-radius: 50%;
+    box-shadow: 5px 2px rgb(0, 0, 0);
+    transition: all .15s linear 0s;
+    font-style: italic;
+    font-size: clamp(10px,15vw,22px);
+}
+.option:active{
+    transform: scale(.8,.8);
+}
+#pro{
+    border-radius: 0% 40%;
+}
+#pro:active{
+    box-shadow: inset 5px -5px black;
+}
+#bill{
+    border-radius: 40% 0%;
+}
+#bill:active{
+    box-shadow: inset 5px -5px black;
+}
+</style>
+</head>
+<body>
+    <div id="cont">
+        <h1>My Shop</h1>
+        <div id="cont1">
+            <button class="option" id="pro">Products</button>
+            <button class="option" id="bill">Make Bill</button>
+        </div>
+    </div>
+<script>
+let pro=document.querySelector("#pro");
+let bill=document.querySelector("#bill");
+pro.addEventListener("click",()=>{
+    setTimeout(()=>{
+    window.location.href="/pro.ejs";
+},150) 
+});
+bill.addEventListener("click",()=>{
+    setTimeout(()=>{
+    window.location.href="/bill.ejs";
+},150)
+});
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
