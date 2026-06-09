@@ -1,6 +1,6 @@
 require("dotenv").config();
 const dbURI=process.env.MONGO_URI;
-const port=process.env.port;
+const PORT=process.env.PORT;
 const express=require("express");
 const path=require("path");
 const app=express();
@@ -78,5 +78,5 @@ app.post("/submit1",async(req,res)=>{
       res.redirect(`http://wa.me/91${mob}`);
     // res.json("aaaaaaa");
 });
-app.listen(port,()=>{console.log("Add New Product");
+app.listen(PORT,()=>{console.log("Add New Product");
 });
